@@ -1,0 +1,105 @@
+import java.util.Set;
+import java.util.TreeSet;
+
+
+public class BSTMap<K extends Comparable<K>, V> implements Map61B<K, V> {
+    
+    private Node head;
+    private int size;
+
+
+    private class Node {
+        private K ki;
+        private V va;
+        private Node left, right;
+
+        public Node (K k, V v) {
+            this.ki = k;
+            this.va = v;
+        }
+    }
+
+    public void clear() {
+        head = null;
+        size = 0;
+    }
+
+    public boolean containsKey(K key) {
+        return get(key) != null;
+    }
+
+    public V get(K key) {
+        return getHelper(head, key);
+    }
+
+    private V getHelper(Node node, K key) {
+        if (node == null) {
+            return null;
+        }
+        int comp = key.compareTo(node.ki);
+        if (comp == 0) {
+            return node.va;
+        }
+        if (comp > 0) {
+            return getHelper(node.right, key);
+        }
+        else {
+            return getHelper(node.left, key);
+        }
+    }
+
+    public int size() {
+        return size;
+    }
+
+    public void put(K key, V val) {
+        head = putHelper(head, key, val);
+    }
+
+    private Node putHelper(Node node, K key, V val) {
+        if (node == null) {
+            size += 1;
+            return new Node(key, val);
+        }
+        int comp = key.compareTo(node.ki);
+        if (comp == 0) {
+            node.va = val;
+        }
+        if (comp > 0) {
+            node.right = putHelper(node.right, key, val);
+        }
+        else {
+            node.left = putHelper(node.left, key, val);
+        }
+        return node;
+    }
+
+    public void printInOrder() {
+        TreeSet<K> result = printHelper(head, new TreeSet<K>());
+        for (K curr : result) {
+            System.out.println(curr);
+        }
+    }
+
+    private TreeSet<K> printHelper(Node node, TreeSet<K> set) {
+        if (node == null) {
+            return null;
+        }
+        set.add(node.ki);
+        printHelper(node.left, set);
+        printHelper(node.right, set);
+        return set;
+    }
+
+    public V remove(K key) {
+        return null;
+    }
+
+    public V remove(K key, V value) {
+        return null;
+    }
+
+    public Set<K> keySet() {
+        return null;
+    }
+}
