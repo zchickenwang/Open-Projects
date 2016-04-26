@@ -1,0 +1,29 @@
+28
+      14608512	Shanghai, China
+      13076300	Buenos Aires, Argentina
+      12691836	Mumbai, India
+      12294193	Mexico City, Distrito Federal, Mexico
+      11624219	Karachi, Pakistan
+      11174257	İstanbul, Turkey
+      10927986	Delhi, India
+      10444527	Manila, Philippines
+      10381222	Moscow, Russia
+      10356500	Dhaka, Bangladesh
+      10349312	Seoul, South Korea
+      10021295	São Paulo, Brazil
+       9000000	Lagos, Nigeria
+       8540121	Jakarta, Indonesia
+       8336599	Tokyo, Japan
+       8263100	Zhumadian, China
+       8175133	New York, New York, United States
+       7871900	Taipei, Taiwan
+       7785965	Kinshasa, Democratic Republic of the Congo
+       7737002	Lima, Peru
+       7734614	Cairo, Egypt
+       7556900	London, United Kingdom
+       7480601	Beijing, China
+       7153309	Tehrān, Iran
+       7150000	Nanchong, China
+       7102602	Bogotá, Colombia
+       7012738	Hong Kong, China
+       6310888	Lahore, Pakistan
